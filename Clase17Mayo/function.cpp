@@ -7,6 +7,7 @@ using namespace std;
 void start();
 void menu();
 void addAge();
+void showAges();
 
 /*Funciones*/
 void menu(){
@@ -33,7 +34,7 @@ void addAge()
 void start()
 {
     int option = 0;
-    
+
     while(option != 6)
     {
         menu();
@@ -51,4 +52,15 @@ void start()
             break;
         }
     }
+}
+
+void showAges()
+{
+    system("cls||clear");
+    cout << "Edades: " << endl;
+    for(int i = 0; i < pos; i++)
+    {
+        cout << ages[i] << endl;
+    }
+    system("pause");
 }
