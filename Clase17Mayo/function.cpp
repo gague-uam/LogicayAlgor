@@ -45,6 +45,9 @@ void start()
         case 1:
             addAge();
             break;
+        case 2:
+            showAges();
+            break;
         case 6:
             cout << "Adios" << endl;
             break;
