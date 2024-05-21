@@ -8,6 +8,9 @@ void start();
 void menu();
 void addAge();
 void showAges();
+void showOldest();
+void showYounguest();
+void showAverage();
 
 /*Funciones*/
 void menu(){
@@ -48,6 +51,15 @@ void start()
         case 2:
             showAges();
             break;
+        case 3:
+            showOldest();
+            break;
+        case 4:
+            showYounguest();
+            break;
+        case 5:
+            showAverage();
+            break;
         case 6:
             cout << "Adios" << endl;
             break;
@@ -65,5 +77,47 @@ void showAges()
     {
         cout << ages[i] << endl;
     }
+    system("pause");
+}
+
+void showOldest()
+{
+    system("cls||clear");
+    int maxAge = ages[0]; // Inicializar con el primer elemento
+
+    for(int i = 1; i < pos; i++) {
+        if(ages[i] > maxAge) {
+            maxAge = ages[i]; // Actualizar maxAge si encontramos una edad mayor
+        }
+    }
+
+    cout << "La edad mayor es: " << maxAge << endl;
+    system("pause");
+}
+
+void showYounguest()
+{
+    system("cls||clear");
+    int minAge = ages[0]; // Inicializar con el primer elemento
+
+    for(int i = 1; i < pos; i++) {
+        if(ages[i] < minAge) {
+            minAge = ages[i]; // Actualizar minAge si encontramos una edad menor
+        }
+    }
+
+    cout << "La edad menor es: " << minAge << endl;
+    system("pause");
+}
+
+void showAverage()
+{
+    system("cls||clear");
+    int sum = 0;
+    for(int i = 0; i < pos; i++)
+    {
+        sum += ages[i];
+    }
+    cout << "El promedio de edades es: " << sum / pos << endl;
     system("pause");
 }
