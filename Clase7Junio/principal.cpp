@@ -6,7 +6,7 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-    setlocale(LC_ALL, "spanish");
+    setlocale(LC_CTYPE, "Spanish");
     principal();
     return 0;
 }
